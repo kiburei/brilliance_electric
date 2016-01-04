@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brilliance Electric</title>
+    <link rel="stylesheet" href="assets/css/qunit.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  	<link rel="stylesheet" href="assets/css/main.css">
+
+	<script>/*<![CDATA[*/!window.QUnit && document.write('<script src="inc/qunit.js"><\/script>')/*]]>*/</script>
+	<script src="http://swarm.simplecartjs.com/js/inject.js"></script>
+  <script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+  <script src="assets/js/jquery-func.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.onvisible.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="assets/js/main.js"></script>
+
+    <!-- Your project file goes here -->
+	<script>/*<![CDATA[*/
+
+	if( QUnit.urlParams.lib && QUnit.urlParams.ver ){
+		document.write('<script src="https://ajax.googleapis.com/ajax/libs/'+
+					QUnit.urlParams.lib + '/' +
+					QUnit.urlParams.ver + '/' +
+					QUnit.urlParams.lib + '.js"><\/script>');
+	} else {
+		document.write('<script src="inc/jquery.1.6.1.min.js"><\/script>');
+	}
+
+	if( QUnit.urlParams.commit ){
+		document.write('<script src="inc/get-raw-javascript.php?file=https://raw.github.com/wojodesign/simplecart-js/'+ QUnit.urlParams.commit +'/simpleCart.js"><\/script>');
+		document.write('<script src="inc/get-raw-javascript.php?file=https://raw.github.com/wojodesign/simplecart-js/'+ QUnit.urlParams.commit +'/test/test.core.js"><\/script>');
+	} else {
+		document.write('<script src="assets/js/simpleCart.js"><\/script>');
+		document.write('<script type="text/javascript" src="test.core.js"><\/script>');
+	}
+	/*]]>*/</script>
+
+
+	<!--<style >
+
+	 	.itemContainer{
+			width:100%;
+			float:left;
+		}
+
+		.itemContainer div{
+			float:left;
+			margin: 5px 20px 5px 20px ;
+		}
+
+		.itemContainer a{
+			text-decoration:none;
+		}
+
+		.cartHeaders{
+			width:100%;
+			float:left;
+		}
+
+		.cartHeaders div{
+			float:left;
+			margin: 5px 20px 5px 20px ;
+		}
+
+
+	</style> -->
+
+
+</head>
+<body>
+  <div id="header">
+    <nav id="nav">
+      <ul>
+        <li><span style="font-weight: bold;"><a href="index.html"><font size="20" color="white">Home</font></a></span></li>
+        <li> <span style="font-weight: bold;"><font size="20" color="white">Products</font></span>
+          <ul>
+            <li><a href="granite_cart.html"><font size="5">Granite Counter Tops</font></a></li>
+            <li><a href=""><font size="5">Lighting</font> </a>
+              <ul>
+                <li><a href="chan_cart.html"><font size="5">Chanderliers</font> </a></li>
+                <li><a href="brack_cart.html"><font size="5">Wall Brackets</font> </a></li>
+                <li><a href="down_cart.html"><font size="5">Downlighters</font> </a></li>
+                <li><a href="gate_cart.html"><font size="5">Gate Lights</font> </a></li>
+                <li><a href="LED_cart.html"><font size="5">LED Floodlights</font> </a></li>
+                <li><a href="street_cart.html"><font size="5">Outdoor</font> </a></li>
+              </ul>
+            </li>
+            <li><a href="t&amp;j_cart.html"><font size="5">T &amp; J</font></a>
+              <ul>
+              <li><a href="switch_cart.html"><font size="5">Switches</font> </a></li>
+              <li><a href="socket_cart.html"><font size="5">Sockets</font> </a></li>
+              <li><a href="circuit_cart.html"><font size="5">Circuit Breakers</font> </a></li>
+            </ul>
+            </li>
+            <li><a href="wallpaper_cart.html"><font size="5">Wallpapers</font></a></li>
+          </ul>
+        </li>
+        <li><span style="font-weight: bold;"><a href="form.html"><font size="20" color="white">Contact
+                Us</font></a></span></li>
+        <li><br>
+        </li>
+      </ul>
+    </nav>
+<!--	<h1 id="qunit-header">QUnit Test Suite</h1>
+    <h2 id="qunit-banner"></h2>
+    <div id="qunit-testrunner-toolbar"></div>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol> -->
+
+    <div id="cart">
+      <ul class="icons">
+        <li><a href="#" class="icon fa-twitter"><span class="label"></span></a>
+          <br>
+        </li>
+        <li><a href="#" class="icon fa-facebook"><span class="label"></span></a>
+          <br>
+        </li>
+        <li><a href="#" class="icon fa-instagram"><span class="label"></span></a>
+          <br>
+        </li>
+        <li><a href="#" class="icon fa-pinterest"><span class="label"></span></a>
+          <br>
+        </li>
+      </ul>
+      <span></span><i class="fa fa-shopping-cart"></i>: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity"
+        class="simpleCart_quantity"></span> items)
+         <a href="javascript:;" class="simpleCart_empty"><i class="fa fa-trash-o"></i></a> <a href="form.html"
+          class="simpleCart_checkout"><i class="fa fa-sign-out"></i></a></div>
+
+<div id="main">
+  <div class="products">
+	<ul>
+    <li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting19" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting20" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting21" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting22" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting23" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting24" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting25" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting26" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting27" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting28" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting29" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting30" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting31" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting32" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting33" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting34" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting35" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting36" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting37" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting29" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting30" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting31" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting32" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting33" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting34" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting35" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting36" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting37" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting0" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting1" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting2" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting3" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting4" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting5" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting6" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting7" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting8" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting9" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting10" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting11" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting12" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting13" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting14" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting15" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting16" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting17" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+<div id="main">
+<div class="products">
+<ul>
+<li class="simpleCart_shelfItem">
+  <img class="item_thumb" src="assets/images/Lighting/Lighting18" width=210 height=200 alt= />
+<div class="product-info">
+<h3>Tawny Bronze </h3>
+  <span class="item_price">Ksh187.95</span>
+  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+  <input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>
+  <input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+
+
+  <!--<input type="hidden" class="item_shipping" value="20" />
+  <input type="text" class="item_quantity" value="1" />-->
+  <input type="button" class="item_add" value="add to cart" />
+  </div>
+</li>
+
+	</ul>
+</div>
+</div>
+</body>
+</html>

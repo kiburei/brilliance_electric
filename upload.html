@@ -1,0 +1,42 @@
+<h1>Adding a new Product</h1>
+      <form method="post" action="market.php" enctype="multipart/form-data">
+       <p>
+              Please Enter the Product Name.
+            </p>
+            <p>
+              Product Category:
+            </p>
+            <input type="text" name="nameMember"/>
+            <p>
+              Product Code
+            </p>
+            <p>
+              Product Price:
+            </p>
+            <input type="text" name="bandMember"/>
+            <p>
+              Please Upload a Photo in gif or jpeg format. The file name should be named after the Members name. If the same file name is uploaded twice it will be overwritten!
+            </p>
+            <p>
+              Photo:
+            </p>
+            <input type="file" name="filep" size=35 />
+            <p>
+              Please Enter any other information about the product here.
+            </p>
+            <p>
+              Other Product Information:
+            </p>
+<textarea rows="10" cols="35" name="aboutMember">
+</textarea>
+            <p>
+              Please Enter any other optional colours.
+            </p>
+            <p>
+              Other Colours:
+            </p>
+            <input type="text" name="otherBands" size=30 />
+            <br/>
+            <br/>
+            <input TYPE="submit" title="Add data to the Database" value="Add Member"/>
+          </form>

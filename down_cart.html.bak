@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <title>Brilliance Electric</title>
+    <link media="all" type="text/css" href="css/style.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <!--[if lte IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
+    <meta content="Shop Around - Great free html template for on-line shop. Use it as a start point for your on line business. The template can be easily implemented in many open source E-commerce platforms"
+      name="keywwords" />
+    <meta content="Shop Around - Great free html template for on-line shop. Use it as a start point for your on line business. The template can be easily implemented in many open source E-commerce platforms"
+      name="description" />
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.jcarousel.pack.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-func.js"></script>
+    <!-- End JS -->
+  </head>
+  <body>
+    <!-- Shell page container-->
+    <div class="">
+      <!-- Header -->
+      <div id="header">
+        <nav id="nav">
+          <ul>
+            <li><span style="font-weight: bold;"><a href="index.html"><font color="white"
+                    size="20">Home</font></a></span></li>
+            <li> <span style="font-weight: bold;"><font color="white" size="20">Products</font></span>
+              <ul>
+                <li><a href="granite_cart.html"><font size="5">Granite Counter
+                      Tops</font></a></li>
+                <li><a href=""><font size="5">Lighting</font> </a>
+                  <ul>
+                    <li><a href="chan_cart.html"><font size="5">Chanderliers</font>
+                      </a></li>
+                    <li><a href="brack_cart.html"><font size="5">Wall Brackets</font>
+                      </a></li>
+                    <li><a href="down_cart.html"><font size="5">Downlighters</font>
+                      </a></li>
+                    <li><a href="gate_cart.html"><font size="5">Gate Lights</font>
+                      </a></li>
+                    <li><a href="LED_cart.html"><font size="5">LED Floodlights</font>
+                      </a></li>
+                    <li><a href="street_cart.html"><font size="5">Outdoor</font>
+                      </a></li>
+                  </ul>
+                </li>
+                <li><a href=""><font size="5">T &amp; J</font></a>
+                  <ul>
+                    <li><a href="socket_cart.html"><font size="5">Sockets &amp;
+                          Switches</font> </a></li>
+                    <li><a href="circuit_cart.html"><font size="5">Circuit
+                          Breakers</font> </a></li>
+                  </ul>
+                </li>
+                <li><a href="wallpaper_cart.html"><font size="5">Wallpapers</font></a></li>
+              </ul>
+            </li>
+            <li><span style="font-weight: bold;"><a href="form.html"><font color="white"
+                    size="20">Contact Us</font></a></span></li>
+            <li><br />
+            </li>
+          </ul>
+        </nav>
+        <!-- Cart -->
+        <div id="cart"> <a class="cart-link" href="form.html">Check Out</a>
+          <div class="cl"> </div>
+          <span>Items: <strong>0</strong></span>    <span>Cost: <strong><math
+                xmlns="http://www.w3.org/1998/Math/MathML">Ksh 0.00</math></strong></span>
+        </div>
+        <!-- End Cart -->
+        <!-- Navigation -->
+        <!-- End Navigation --> </div>
+      <div id="sidebar">
+        <!-- Search -->
+        <!--		<div class="box search">
+			<h2>Search by <span></span></h2>			<div class="box-content">
+				<form action="" method="post">
+					<label>Keyword</label>					<input type="text" class="field" />
+					<label>Category</label>
+					<select class="field">						<option value="">-- Select Category --</option>
+					</select>
+					<div class="inline-field">						<label>Price</label>
+						<select class="field small-field">							<option value="">Ksh10000</option>
+						</select>						<label>to:</label>
+						<select class="field small-field">							<option value="">Ksh500000</option>
+						</select>					</div>
+					<input type="submit" class="search-submit" value="Search" />
+					<p>
+						<a href="#" class="bul">Advanced search</a><br />						<a href="#" class="bul">Contact Customer Support</a>
+					</p>
+				</form>			</div>
+		</div> -->
+        <!-- End Search -->
+        <!-- Categories -->
+        <!-- End Categories --> </div>
+      <!-- End Header -->
+      <!-- Main -->
+      <div id="main">
+        <div class="cl"> </div>
+        <!-- Content -->
+        <div id="">
+          <!-- Content Slider -->
+          <!-- End Content Slider -->
+          <!-- Products -->
+          <div class="products">
+            <div class="cl"> </div>
+            <ul>
+              <li class="simpleCart_shelfItem"> <img width="210" height="200" alt="/"
+                  src="assets/images/downlightes/DOWN_0" class="item_thumb" />
+                <div class="product-info">
+                  <h3>Down Lighters </h3>
+                  <span class="item_price">Ksh 1000.00</span>
+                  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+			<input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>			<input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+                  <!--<input type="hidden" class="item_shipping" value="20" />
+			<input type="text" class="item_quantity" value="1" />--> <input type="button"
+                    value="add to cart" class="item_add" /> </div>
+              </li>
+              <li class="simpleCart_shelfItem"> <img width="210" height="200" alt="/"
+                  src="assets/images/downlightes/DOWN_1" class="item_thumb" />
+                <div class="product-info">
+                  <h3>Down Lighters </h3>
+                  <span class="item_price">Ksh</span><span class="item_price">
+                    1000.00</span>
+                  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+			<input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>			<input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+                  <!--<input type="hidden" class="item_shipping" value="20" />
+			<input type="text" class="item_quantity" value="1" />--> <input type="button"
+                    value="add to cart" class="item_add" /> </div>
+              </li>
+              <li class="simpleCart_shelfItem"> <img width="210" height="200" alt="/"
+                  src="assets/images/downlightes/DOWN_2" class="item_thumb" />
+                <div class="product-info">
+                  <h3>Down Lighters </h3>
+                  <span class="item_price">Ksh</span><span class="item_price">
+                    1000.00</span><!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+			<input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>			<input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+                  <!--<input type="hidden" class="item_shipping" value="20" />
+			<input type="text" class="item_quantity" value="1" />--> <input type="button"
+                    value="add to cart" class="item_add" /> </div>
+              </li>
+              <li class="simpleCart_shelfItem"> <img width="210" height="200" alt="/"
+                  src="assets/images/downlightes/DOWN_3" class="item_thumb" />
+                <div class="product-info">
+                  <h3>Down Lighters </h3>
+                  <span class="item_price">Ksh</span><span class="item_price">
+                    1000.00</span><!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+			<input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>			<input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+                  <!--<input type="hidden" class="item_shipping" value="20" />
+			<input type="text" class="item_quantity" value="1" />--> <input type="button"
+                    value="add to cart" class="item_add" /> </div>
+              </li>
+              <li class="simpleCart_shelfItem"> <img width="210" height="200" alt="/"
+                  src="assets/images/downlightes/DOWN_4" class="item_thumb" />
+                <div class="product-info">
+                  <h3>Down Lighters </h3>
+                  <span class="item_price">Ksh</span><span class="item_price">
+                    1000.00</span><!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+			<input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>			<input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+                  <!--<input type="hidden" class="item_shipping" value="20" />
+			<input type="text" class="item_quantity" value="1" />--> <input type="button"
+                    value="add to cart" class="item_add" /> </div>
+              </li>
+              <li class="simpleCart_shelfItem"> <img width="210" height="200" alt="/"
+                  src="assets/images/downlightes/DOWN_5" class="item_thumb" />
+                <div class="product-info">
+                  <h3>Down Lighters </h3>
+                  <span class="item_price">Ksh</span><span class="item_price">
+                    1000.00</span>
+                  <!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+			<input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>			<input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+                  <!--<input type="hidden" class="item_shipping" value="20" />
+			<input type="text" class="item_quantity" value="1" />--> <input type="button"
+                    value="add to cart" class="item_add" /> </div>
+              </li>
+              <li class="simpleCart_shelfItem"> <img width="210" height="200" alt="/"
+                  src="assets/images/downlightes/DOWN_6" class="item_thumb" />
+                <div class="product-info">
+                  <h3>Down Lighters </h3>
+                  <span class="item_price">Ksh</span><span class="item_price">
+                    1000.00</span><!-- <input type="checkbox" class="item_color" value="Blue"/><label>Blue</label>
+			<input type="checkbox" class="item_color" value="Yellow"/><label>Yellow</label>			<input type="checkbox" class="item_color" value="Red"/><label>Red</label> -->
+                  <!--<input type="hidden" class="item_shipping" value="20" />
+			<input type="text" class="item_quantity" value="1" />--> <input type="button"
+                    value="add to cart" class="item_add" /> </div>
+              </li>
+            </ul>
+            <div class="cl"> </div>
+          </div>
+          <!-- End Products --> </div>
+        <!-- End Content -->
+        <!-- Sidebar -->
+        <!-- End Sidebar -->
+        <div class="cl"> </div>
+      </div>
+      <!-- End Main -->
+      <!-- Side Full -->
+      <div class="side-full">
+        <!-- More Products -->
+        <div class="more-products">
+          <div class="more-products-holder">
+            <ul>
+              <li><a href="#"><img width="93" height="93" alt="" src="assets/images/T&amp;J/10.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/19.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/29.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/39.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/49.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/59.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/69.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/79.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/89.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/99.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/90.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/91.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/92.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/93.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/94.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/95.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93" alt="" src="assets/images/T&amp;J/96.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/94.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/97.jpg" /></a></li>
+              <li><a href="#"><img width="93" height="93alt=&quot;&quot;" src="assets/images/T&amp;J/98.jpg" /></a></li>
+              <li class="last"><a href="#"><img alt="" src="assets/images/T&amp;J/9.jpg" /></a></li>
+            </ul>
+          </div>
+          <div class="more-nav"> <a class="prev" href="#">previous</a> <a class="next"
+              href="#">next</a> </div>
+        </div>
+        <!-- End More Products -->
+        <!-- Text Cols -->
+        <!-- End Side Full -->
+        <!-- Footer -->
+        <div id="footer">
+          <div class="container">
+            <div class="row">
+              <!-- Social Media -->
+              <ul class="icons">
+                <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a><br />
+                </li>
+                <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a><br />
+                </li>
+                <li><a class="icon fa-instagram" href="#"><span class="label">Instagram</span></a><br />
+                </li>
+                <li><a class="icon fa-pinterest" href="#"><span class="label">Pinterest</span></a><br />
+                </li>
+                <li><a class="icon fa-dribbble" href="#"><span class="label">Dribbble</span></a><br />
+                </li>
+                <li><a class="icon fa-linkedin" href="#"><span class="label">Linkedin</span></a><br />
+                </li>
+              </ul>
+              <!-- Copyright -->
+              <div class="copyright">
+                <ul class="menu">
+                  <li>© Untitled. All rights reserved.</li>
+                  <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.dropotron.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/jquery.onvisible.min.js"></script>
+      <script src="assets/js/skel.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="assets/js/main.js"></script>
+      <!-- End Footer -->
+    </div>
+    <!-- End Shell -->
+  </body>
+</html>
