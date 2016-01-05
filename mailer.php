@@ -1,5 +1,5 @@
 <?php
-$to = 'akiburei@gmail.com';
+$to = 'order@myshop.com';
 $subject = 'Simple Cart Order';
 
 $content = $_POST;

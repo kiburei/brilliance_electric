@@ -93,6 +93,9 @@
 															method: "POST" ,
     													success: "success.html" ,
     													cancel: "cancel.php" ,
+															extra_data:{
+
+															}
 														},
 					currency				: "KSH",
 					language				: "english-us",
